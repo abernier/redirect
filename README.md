@@ -1,5 +1,6 @@
 [![ci/cd](https://github.com/abernier/redirect/workflows/ci/cd/badge.svg)](https://github.com/abernier/redirect/actions?query=workflow%3Aci%2Fcd)
 [![NPM version](https://img.shields.io/npm/v/@abernier/redirect.svg?style=flat)](https://www.npmjs.com/package/@abernier/redirect)
+[![codecov](https://codecov.io/gh/abernier/redirect/branch/master/graph/badge.svg?token=C7ypDCgb6Q)](https://codecov.io/gh/abernier/redirect)
 
 Connect/Express `?redirect` middleware.
 
