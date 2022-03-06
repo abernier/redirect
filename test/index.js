@@ -1,8 +1,8 @@
-import tap from "tap";
-import request from "request";
-import express from "express";
+const tap = require("tap");
+const request = require("request");
+const express = require("express");
 
-import redirect from "../index.js";
+const redirect = require("../index.js");
 
 let app;
 let server;
@@ -22,12 +22,12 @@ tap.test("setup", function (t) {
 
 tap.test("url", function (t) {
   app.get("/app-url1", function (req, res, next) {
-    console.log("/app-url1");
+    // console.log("/app-url1");
 
     res.redirect("/shouldnotgothere");
   });
   app.get("/app-url2", function (req, res, next) {
-    console.log("/app-url2");
+    // console.log("/app-url2");
 
     res.status(200).end("url2!");
   });
@@ -50,7 +50,7 @@ tap.test("url", function (t) {
 
 tap.test("status", function (t) {
   app.get("/app-status1", function (req, res, next) {
-    console.log("/app-status1");
+    // console.log("/app-status1");
 
     res.redirect(301, "/shouldnotgothere");
   });
@@ -79,7 +79,7 @@ tap.test("status", function (t) {
 
 tap.test("teardown", function (t) {
   server.close(function (er) {
-    console.log("server stopped callback");
+    // console.log("server stopped callback");
     if (er) return t.threw(er);
 
     t.end();

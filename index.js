@@ -1,6 +1,6 @@
-import qs from "qs";
+const qs = require("qs");
 
-export default function (settings) {
+module.exports = function (settings) {
   settings ||= {
     paramName: 'redirect'
   }
@@ -82,7 +82,7 @@ export default function (settings) {
 
       let args;
       if (status) {
-        args = [url, status];
+        args = [status, url];
       } else {
         args = [url];
       }

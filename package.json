@@ -2,13 +2,12 @@
   "name": "@abernier/redirect",
   "version": "1.0.4",
   "description": "Connect/Express ?redirect middleware",
-  "main": "index.js",
-  "type": "module",
+  "main": "src/index.js",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "test": "tap"
+    "test": "tap --bail -R spec"
   },
   "repository": {
     "type": "git",
