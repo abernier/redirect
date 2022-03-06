@@ -20,5 +20,8 @@
   "homepage": "https://github.com/abernier/redirect#readme",
   "dependencies": {
     "qs": "^6.10.3"
+  },
+  "engines": {
+    "node": ">=15"
   }
 }
