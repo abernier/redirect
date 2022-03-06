@@ -8,12 +8,16 @@ In short, it allows you to override any route/handler `res.redirect('/foo')` wit
 # Example
 
 ```js
+import express from 'express'
 import redirect from '@abernier/redirect'
 
+app = express()
 app.use(redirect())
 
+// ...
+
 app.post('/login', (req, res) => {
-  ...
+  // ...
 
   res.redirect('/profile') // *planned redirection
 })
