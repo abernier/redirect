@@ -3,7 +3,7 @@
 
 Connect/Express `?redirect` middleware.
 
-In short, it allows you to override any route/handler `res.redirect('/foo')` with `?redirect=/bar`
+In short, it allows you to override any route/handler `res.redirect('/foo')` with a `?redirect=/bar` querystring param.
 
 # Example
 
