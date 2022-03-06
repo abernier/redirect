@@ -7,7 +7,7 @@
     "access": "public"
   },
   "scripts": {
-    "test": "tap --bail -R spec"
+    "test": "tap --bail -R spec --no-check-coverage"
   },
   "repository": {
     "type": "git",
