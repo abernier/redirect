@@ -1,6 +1,6 @@
 {
   "name": "@abernier/redirect",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Connect/Express ?redirect middleware",
   "main": "index.js",
   "type": "module",
