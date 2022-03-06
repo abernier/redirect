@@ -2,7 +2,10 @@
   "name": "@abernier/redirect",
   "version": "1.0.5",
   "description": "Connect/Express ?redirect middleware",
-  "main": "src/index.js",
+  "exports": {
+    "require": "./index.cjs",
+    "import": "./index.js"
+  },
   "publishConfig": {
     "access": "public"
   },

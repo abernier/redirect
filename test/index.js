@@ -2,7 +2,7 @@ const tap = require("tap");
 const request = require("request");
 const express = require("express");
 
-const redirect = require("../index.js");
+const redirect = require("../index.cjs");
 
 let app;
 let server;
