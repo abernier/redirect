@@ -1,3 +1,7 @@
+Connect/Express `?redirect` middleware.
+
+# Example
+
 ```js
 import redirect from '@abernier/redirect'
 
