@@ -1,7 +1,7 @@
 import qs from 'qs'
 
 export default function (req, res, next) {
-  console.log('next middleware');
+  // console.log('next middleware');
 
   const n = req.query.next;
   
@@ -9,7 +9,7 @@ export default function (req, res, next) {
 
   // arguments: [status], url, [options]
   res.redirect = function () {
-    console.log('res.redirect', arguments);
+    // console.log('res.redirect', arguments);
     
     //
     // status, url, options values
@@ -48,7 +48,7 @@ export default function (req, res, next) {
         }
       }
     }
-    console.log('redirect: url, status, options', url, status, options)
+    // console.log('redirect: url, status, options', url, status, options)
 
     options ||= {
       next: true,
@@ -69,7 +69,7 @@ export default function (req, res, next) {
         }
       } else {
         url = n;
-        console.log('monkey-patched redirect');
+        // console.log('monkey-patched redirect');
       }
     }
 
@@ -79,7 +79,7 @@ export default function (req, res, next) {
     } else {
       args = [url];
     }
-    console.log('args', args);
+    // console.log('args', args);
     return oldRedirect.apply(res, args);
   };
 
