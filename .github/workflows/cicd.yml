@@ -1,0 +1,37 @@
+name: ci/cd
+
+on: [push, pull_request, create] # see: https://developer.github.com/webhooks/
+
+jobs:
+  test:
+    name: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node_version: ['14', '16', '17']
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node_version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node_version }}
+    - name: testing the code
+      run: |
+        npm ci
+        npm test
+
+  publish-npm:
+    name: Publish on NPM using node 13 and ubuntu-latest
+    if: github.event_name == 'create' && github.event.ref_type == 'tag' # see: https://developer.github.com/v3/activity/events/types/#createevent
+    needs: test # previous `test` job needs to complete successfully
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 17
+          registry-url: https://registry.npmjs.org/
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}} # see: https://github.com/abernier/redirect/settings/secrets
