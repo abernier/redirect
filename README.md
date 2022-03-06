@@ -1,3 +1,6 @@
+[![ci/cd](https://github.com/abernier/redirect/workflows/ci/cd/badge.svg)](https://github.com/abernier/redirect/actions?query=workflow%3Aci%2Fcd)
+[![NPM version](https://img.shields.io/npm/v/redirect.svg?style=flat)](https://www.npmjs.com/package/@abernier/redirect)
+
 Connect/Express `?redirect` middleware.
 
 In short, it allows you to override any route/handler `res.redirect('/foo')` with `?redirect=/bar`
