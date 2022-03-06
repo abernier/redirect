@@ -53,5 +53,4 @@ Pre-requisite:
 
 Then, to release a new version on [npm](https://www.npmjs.com/package/redirect):
 1. bump the [`package.json` version](https://github.com/abernier/redirect/edit/master/package.json)
-2. then, create [a new realese](https://github.com/abernier/redirect/releases/new) and wait for the [ci/cd](https://github.com/abernier/redirect/actions?query=workflow%3Aci%2Fcd) publish it :)
-   ![](https://assets.codepen.io/67030/release.png)
+2. then, create [a new realese](https://github.com/abernier/redirect/releases/new) and wait for the [ci/cd](https://github.com/abernier/redirect/actions?query=workflow%3Aci%2Fcd) publish it
