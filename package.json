@@ -4,6 +4,9 @@
   "description": "Connect/Express ?redirect middleware",
   "main": "index.js",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "node -e \"process.exit(0)\""
   },
