@@ -1,0 +1,21 @@
+{
+  "name": "@abernier/redirect",
+  "version": "1.0.0",
+  "description": "Connect/Express ?redirect middleware",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node -e \"process.exit(0)\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abernier/redirect.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abernier/redirect/issues"
+  },
+  "homepage": "https://github.com/abernier/redirect#readme"
+}
