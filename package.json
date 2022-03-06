@@ -19,8 +19,6 @@
   },
   "homepage": "https://github.com/abernier/redirect#readme",
   "dependencies": {
-    "lodash.defaults": "^4.2.0",
-    "lodash.isobject": "^3.0.2",
     "qs": "^6.10.3"
   }
 }

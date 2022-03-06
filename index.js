@@ -1,5 +1,3 @@
-import isObject from 'lodash.isobject'
-import defaults from 'lodash.defaults'
 import qs from 'qs'
 
 export default function (req, res, next) {
@@ -29,7 +27,7 @@ export default function (req, res, next) {
     } else {
       // 2 args or less
       const lastarg = arguments[arguments.length-1];
-      if (isObject(lastarg)) {
+      if (typeof lastarg !== 'string') {
         // url, options
         status = undefined;
         url = arguments[0];
@@ -52,10 +50,10 @@ export default function (req, res, next) {
     }
     console.log('redirect: url, status, options', url, status, options)
 
-    defaults(options, {
+    options ||= {
       next: true,
       passnext: true
-    });
+    }
     
     if (n) {
       if (options && options.next !== true) {
