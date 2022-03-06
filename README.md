@@ -1,5 +1,7 @@
 Connect/Express `?redirect` middleware.
 
+In short, it allows you to override any route/handler `res.redirect('/foo')` with `?redirect=/bar`
+
 # Example
 
 ```js
