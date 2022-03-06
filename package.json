@@ -8,8 +8,7 @@
     "access": "public"
   },
   "scripts": {
-    "test": "tap",
-    "posttest": "tap --coverage-report=text-lcov | codecov --pipe"
+    "test": "tap"
   },
   "repository": {
     "type": "git",
@@ -25,11 +24,14 @@
   "dependencies": {
     "qs": "^6.10.3"
   },
+  "peerDependencies": {
+    "express": "^4.17.3"
+  },
   "engines": {
     "node": ">=15"
   },
   "devDependencies": {
-    "codecov": "^3.8.3",
+    "coveralls": "^3.1.1",
     "express": "^4.17.3",
     "request": "^2.88.2",
     "tap": "^16.0.0"
