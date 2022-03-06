@@ -2,13 +2,13 @@ import qs from "qs";
 
 export default function (settings) {
   settings ||= {
-    paramName: 'next'
+    paramName: 'redirect'
   }
 
   const {paramName} = settings
 
   return function (req, res, next) {
-    // console.log('next middleware');
+    // console.log('redirect middleware');
 
     const n = req.query[paramName];
 
@@ -64,9 +64,9 @@ export default function (settings) {
 
       if (n) {
         if (options && options.ignore === true) {
-          //console.log('ignoring next!');
+          //console.log('ignoring redirect param!');
 
-          // append ?next= param to the redirect url
+          // append ?redirect= param to the redirect url
           if (options.pass === true) {
             const u = new URL(url);
             const query = qs.parse(u.search); // TODO: replace qs by https://nodejs.org/api/url.html#new-urlsearchparams
