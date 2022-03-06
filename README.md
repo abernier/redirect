@@ -11,7 +11,7 @@ In short, it allows you to override any route/handler `res.redirect('/foo')` wit
 import express from 'express'
 import redirect from '@abernier/redirect'
 
-app = express()
+const app = express()
 app.use(redirect())
 
 // ...
