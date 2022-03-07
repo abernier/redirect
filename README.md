@@ -8,17 +8,17 @@ In short, it allows you to override any route/handler `res.redirect('/foo')` wit
 
 # Examples
 
-## Basic
-
 ```js
 import express from 'express'
 import redirect from '@abernier/redirect'
 
 const app = express()
 app.use(redirect())
+```
 
-// ...
+## Basic
 
+```js
 app.post('/login', (req, res) => {
   // ...
 
@@ -26,7 +26,7 @@ app.post('/login', (req, res) => {
 })
 ```
 
-*Override it with `redirect` querystring param:
+Override it with `?redirect` querystring param:
 
 ```
 $ curl -XPOST http://localhost:3000/login?redirect=/welcomeback
