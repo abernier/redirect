@@ -24,11 +24,11 @@ app.use(redirect())
 app.post('/login', (req, res) => {
   // ...
 
-  res.redirect('/profile') // *planned redirection
+  res.redirect('/profile') // default redirection
 })
 ```
 
-Override it with `?redirect` querystring param:
+Override the default redirection -> be redirected to `/welcomeback` by adding a `?redirect` querystring param:
 
 ```
 $ curl -XPOST http://localhost:3000/login?redirect=/welcomeback
