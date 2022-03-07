@@ -6,7 +6,9 @@ Connect/Express `?redirect` middleware.
 
 In short, it allows you to override any route/handler `res.redirect('/foo')` with a `?redirect=/bar` querystring param.
 
-# Example
+# Examples
+
+## Basic
 
 ```js
 import express from 'express'
@@ -59,3 +61,7 @@ Pre-requisite:
 Then, to release a new version on [npm](https://www.npmjs.com/package/redirect):
 1. bump the [`package.json` version](https://github.com/abernier/redirect/edit/main/package.json)
 2. then, create [a new realese](https://github.com/abernier/redirect/releases/new) and wait for the [ci/cd](https://github.com/abernier/redirect/actions?query=workflow%3Aci%2Fcd) publish it
+
+# Links
+
+- Announcement on reddit [r/expressjs](https://www.reddit.com/r/expressjs/comments/t85jzm/connectexpress_redirect_middleware/)
