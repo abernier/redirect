@@ -10,7 +10,7 @@ module.exports = function redirect(settings) {
   return function (req, res, next) {
     // console.log('redirect middleware');
 
-    const n = req.query[paramName];
+    const n = decodeURIComponent(req.query[paramName]);
 
     const oldRedirect = res.redirect;
 
